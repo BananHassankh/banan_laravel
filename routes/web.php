@@ -2,9 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\UserController;
+
+// يفضل وضع هذا السطر مع باقي المسارات الخاصة بالمشروع
+Route::resource('users', UserController::class);
 
 Route::get('/', function () {
-    return redirect('tasks');
+    return redirect('users');
 });
 
 Route::get('tasks', function () {
